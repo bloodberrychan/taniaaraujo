@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tânia Araújo | Portfólio de reportagem e comunicação</title>
+<meta name="description" content="Reportagens, entrevistas e textos para o mercado de seguros por Tânia Araújo, publicados em A Tarde, Correio, Farol da Bahia e CQCS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --baia:#10304A; --mare:#E4EEEA; --papel:#FAFBF8; --dende:#E3A008; --pedra:#4C5D69; --linha:#C9D7D2;
+  --sans:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --pad:clamp(1.25rem,5vw,4rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.lock{overflow:hidden}
+body{margin:0;background:var(--papel);color:var(--baia);font-family:var(--sans);font-size:1.0625rem;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--dende);outline-offset:3px}
+.hero :focus-visible,.contato :focus-visible{outline-color:var(--dende)}
+.wrap{padding-inline:var(--pad);max-width:78rem;margin-inline:auto}
+
+/* topo */
+.hero{background:var(--baia);color:var(--papel);padding-bottom:clamp(3rem,8vw,6.5rem)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.25rem;font-weight:600}
+.nav a{text-decoration:none;padding:.35rem 0}
+.nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+.nav a:hover{text-decoration:underline;text-decoration-color:var(--dende);text-decoration-thickness:3px;text-underline-offset:6px}
+.hero h1{font-weight:800;font-size:clamp(3.4rem,13.5vw,10.5rem);line-height:.9;letter-spacing:-.045em;margin:clamp(2.5rem,7vw,5.5rem) 0 0}
+.hero h1 span{display:block}
+.hero .rule{height:.75rem;width:min(22rem,60%);background:var(--dende);margin:clamp(1.5rem,3vw,2.5rem) 0}
+.hero-grid{display:grid;gap:2rem 4rem;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end}
+.lede{font-size:clamp(1.3rem,2.4vw,1.8rem);line-height:1.3;font-weight:400;margin:0;max-width:30ch;letter-spacing:-.01em}
+.pubs{margin:0;padding:0;list-style:none;font-size:1rem;color:#C7D9D3}
+.pubs-box p{margin:0 0 .5rem;font-weight:600;color:var(--papel)}
+.pubs li{padding:.4rem 0;border-top:1px solid #35546C}
+.btn{display:inline-block;background:var(--dende);color:var(--baia);font-weight:800;text-decoration:none;padding:.9rem 1.5rem;border-radius:.35rem;border:0;font:inherit;font-weight:800;cursor:pointer}
+.btn:hover{background:#F2B52A}
+.hero .btn{margin-top:2rem}
+
+/* trabalhos */
+.trabalhos{padding-block:clamp(3.5rem,8vw,6rem)}
+.trabalhos h2,.sobre h2,.contato h2{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1;letter-spacing:-.03em;font-weight:800;margin:0 0 .6rem}
+.intro{color:var(--pedra);max-width:46ch;margin:0 0 2rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.chip{font:inherit;font-weight:600;font-size:.95rem;padding:.5rem 1rem;border-radius:2rem;border:2px solid var(--baia);background:transparent;color:var(--baia);cursor:pointer}
+.chip:hover{background:var(--mare)}
+.chip[aria-pressed="true"]{background:var(--baia);color:var(--papel)}
+.list{list-style:none;margin:0;padding:0;border-top:3px solid var(--baia)}
+.row{border-bottom:1px solid var(--linha)}
+.row[hidden]{display:none}
+.row-btn{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:9.5rem minmax(0,1fr) 11rem;gap:1rem 2rem;padding:1.6rem .5rem;cursor:pointer}
+.row-btn:hover{background:var(--mare)}
+.row-btn:focus-visible{outline:3px solid var(--baia);outline-offset:-3px}
+.row-meta{display:flex;flex-direction:column;font-weight:600}
+.year{color:var(--pedra);font-weight:400}
+.row-main{display:flex;flex-direction:column;gap:.4rem}
+.row-title{font-weight:800;font-size:1.45rem;line-height:1.15;letter-spacing:-.02em}
+.row-dek{color:var(--pedra);max-width:60ch}
+.row-go{display:flex;flex-direction:column;align-items:flex-end;text-align:right;font-size:.9rem;color:var(--pedra);gap:.25rem}
+.row-go b{color:var(--baia);font-size:1rem;border-bottom:3px solid var(--dende)}
+.row.featured .row-title{font-size:clamp(1.9rem,4vw,3rem);line-height:1.02;letter-spacing:-.035em}
+.row.featured .row-dek{font-size:1.2rem}
+.row.featured .row-btn{padding-block:2.4rem}
+
+/* sobre */
+.sobre{background:var(--mare);padding-block:clamp(3.5rem,8vw,6rem)}
+.sobre-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:2.5rem 5rem}
+.sobre p{max-width:52ch;margin:0 0 1rem}
+.areas{list-style:none;margin:0;padding:0;border-top:3px solid var(--baia)}
+.areas li{padding:1rem 0;border-bottom:1px solid var(--linha)}
+.areas strong{display:block;font-size:1.2rem;letter-spacing:-.01em}
+.areas span{color:var(--pedra)}
+
+/* contato */
+.contato{background:var(--baia);color:var(--papel);padding-block:clamp(3.5rem,8vw,6rem)}
+.contato p{max-width:40ch;color:#C7D9D3;margin:0 0 1.75rem;font-size:1.15rem}
+footer{background:var(--baia);color:#9DB6C7;padding-block:1.5rem;font-size:.9rem;border-top:1px solid #35546C}
+
+/* leitura */
+dialog{border:0;padding:0;margin:0;max-width:none;max-height:none;width:100%;height:100%;background:transparent;color:var(--baia)}
+dialog::backdrop{background:rgba(16,48,74,.72)}
+.sheet{position:relative;margin:0 auto;height:100%;max-width:46rem;background:var(--papel);overflow-y:auto;overscroll-behavior:contain;padding:0 clamp(1.25rem,5vw,3rem) 4rem}
+dialog[open] .sheet{animation:in .22s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(1rem)}to{opacity:1;transform:none}}
+.bar{position:sticky;top:0;background:var(--papel);display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid var(--linha);z-index:1;font-weight:600}
+.close{font:inherit;font-weight:800;background:var(--baia);color:var(--papel);border:0;border-radius:.35rem;padding:.55rem 1rem;cursor:pointer}
+.close:focus-visible{outline-color:var(--dende)}
+.sheet h2{font-weight:800;font-size:clamp(2rem,6vw,3.1rem);line-height:1.02;letter-spacing:-.035em;margin:2.2rem 0 .75rem}
+.sheet .meta{color:var(--pedra);margin:0 0 2rem}
+.prose{font-family:var(--serif);font-size:1.2rem;line-height:1.72;max-width:62ch}
+.prose p{margin:0 0 1.15rem}
+.prose h3{font-family:var(--sans);font-weight:800;font-size:1.5rem;letter-spacing:-.02em;line-height:1.15;margin:2.4rem 0 .8rem}
+
+@media (max-width:52rem){
+  .hero-grid,.sobre-grid{grid-template-columns:1fr}
+  .row-btn{grid-template-columns:1fr;gap:.6rem;padding-inline:.25rem}
+  .row-meta{flex-direction:row;gap:.6rem}
+  .row-go{flex-direction:row;justify-content:space-between;align-items:center;text-align:left}
+  .nav ul{gap:1rem}
+  .sheet{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  dialog[open] .sheet{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="topo">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a href="#topo">Tânia Araújo</a>
+      <ul>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <h1><span>Tânia</span><span>Araújo</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div>
+        <p class="lede">Reportagem, entrevista e texto para o mercado, com apuração e linguagem direta.</p>
+        <a class="btn" href="#trabalhos">Ver os textos</a>
+      </div>
+      <div class="pubs-box">
+        <p>Textos publicados em</p>
+        <ul class="pubs">
+          <li>A Tarde</li>
+          <li>Correio</li>
+          <li>Farol da Bahia</li>
+          <li>CQCS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="trabalhos" id="trabalhos" aria-labelledby="t-trabalhos">
+  <div class="wrap">
+    <h2 id="t-trabalhos">Trabalhos selecionados</h2>
+    <p class="intro">11 textos, do furo de reportagem à cobertura do mercado de seguros. Abra qualquer um para ler na íntegra.</p>
+    <div class="filters" role="group" aria-label="Filtrar por tipo de texto">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">Todos</button>
+      <button type="button" class="chip" data-filter="reportagem" aria-pressed="false">Reportagem</button><button type="button" class="chip" data-filter="seguros" aria-pressed="false">Mercado de seguros</button><button type="button" class="chip" data-filter="servico" aria-pressed="false">Serviço e explicação</button>
+    </div>
+    <ul class="list" id="lista">
+<li class="row featured" data-cat="reportagem">
+  <button type="button" class="row-btn" data-open="a-meteorito">
+    <span class="row-meta"><span class="outlet">A Tarde</span><span class="year">2013</span></span>
+    <span class="row-main"><span class="row-title">Meteorito cai no quintal de uma casa em Salvador</span><span class="row-dek">Um morador do Comércio acordou com um estrondo, encontrou uma rocha no quintal e a Ufba suspeita que seja um meteorito.</span></span>
+    <span class="row-go"><span>2 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="reportagem">
+  <button type="button" class="row-btn" data-open="a-dor">
+    <span class="row-meta"><span class="outlet">Correio</span><span class="year">2015</span></span>
+    <span class="row-main"><span class="row-title">Dor na juventude</span><span class="row-dek">Jovens contam como seguiram em frente depois de perder amigos em acidentes de trânsito e outras tragédias. Escrito com Lorena Souza.</span></span>
+    <span class="row-go"><span>9 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="reportagem">
+  <button type="button" class="row-btn" data-open="a-salitre">
+    <span class="row-meta"><span class="outlet">Reportagem universitária</span><span class="year">2012</span></span>
+    <span class="row-main"><span class="row-title">Danos causados pelo salitre em eletroeletrônicos</span><span class="row-dek">Por que a maresia de Salvador corrói computadores e eletrodomésticos, e por que a garantia quase nunca cobre o prejuízo.</span></span>
+    <span class="row-go"><span>3 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="reportagem">
+  <button type="button" class="row-btn" data-open="a-ponte">
+    <span class="row-meta"><span class="outlet">Farol da Bahia</span><span class="year"></span></span>
+    <span class="row-main"><span class="row-title">Série: Ponte de Itaparica</span><span class="row-dek">Entrevista com a direção da Codeba sobre o que a futura ponte muda, ou não, para os portos da Baía de Todos os Santos.</span></span>
+    <span class="row-go"><span>5 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="seguros">
+  <button type="button" class="row-btn" data-open="a-dpvat">
+    <span class="row-meta"><span class="outlet">CQCS</span><span class="year">2011</span></span>
+    <span class="row-main"><span class="row-title">Parceria para atender ao DPVAT</span><span class="row-dek">Os Correios passam a receber pedidos de indenização do seguro DPVAT, começando por Ceará, Piauí e Maranhão.</span></span>
+    <span class="row-go"><span>3 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="seguros">
+  <button type="button" class="row-btn" data-open="a-cartao">
+    <span class="row-meta"><span class="outlet">CQCS</span><span class="year">2011</span></span>
+    <span class="row-main"><span class="row-title">Popularizar o seguro nem sempre é vantagem</span><span class="row-dek">Seguros vendidos pelo cartão de crédito são práticos, mas trazem dúvidas ao consumidor e preocupam os corretores.</span></span>
+    <span class="row-go"><span>2 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="seguros">
+  <button type="button" class="row-btn" data-open="a-internet">
+    <span class="row-meta"><span class="outlet">CQCS</span><span class="year">2011</span></span>
+    <span class="row-main"><span class="row-title">A internet e a corretagem</span><span class="row-dek">O que a venda de seguros pela internet muda para o corretor e para o relacionamento com o cliente.</span></span>
+    <span class="row-go"><span>2 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="seguros">
+  <button type="button" class="row-btn" data-open="a-ouvidorias">
+    <span class="row-meta"><span class="outlet">CQCS</span><span class="year">2011</span></span>
+    <span class="row-main"><span class="row-title">O papel das ouvidorias para o mercado de seguros</span><span class="row-dek">A CNseg explica como as ouvidorias resolvem a maior parte das reclamações antes de chegarem à Susep ou à Justiça.</span></span>
+    <span class="row-go"><span>2 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="seguros">
+  <button type="button" class="row-btn" data-open="a-escola">
+    <span class="row-meta"><span class="outlet">CQCS</span><span class="year">2011</span></span>
+    <span class="row-main"><span class="row-title">A Escola “cai” na rede</span><span class="row-dek">Como a Escola Nacional de Seguros usa as redes sociais para conversar com quem quer se formar no setor.</span></span>
+    <span class="row-go"><span>2 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="servico">
+  <button type="button" class="row-btn" data-open="a-automovel">
+    <span class="row-meta"><span class="outlet">CQCS</span><span class="year">2011</span></span>
+    <span class="row-main"><span class="row-title">Dicas para aquisição do Seguro de Automóvel</span><span class="row-dek">O que ler, declarar e comparar antes de contratar o seguro do carro, incluindo DPVAT e Carta Verde.</span></span>
+    <span class="row-go"><span>2 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+<li class="row" data-cat="servico">
+  <button type="button" class="row-btn" data-open="a-mp">
+    <span class="row-meta"><span class="outlet">Politz</span><span class="year"></span></span>
+    <span class="row-main"><span class="row-title">O que é e qual a importância do Ministério Público?</span><span class="row-dek">Um guia em linguagem simples sobre o que faz o Ministério Público e como ele se divide.</span></span>
+    <span class="row-go"><span>3 min de leitura</span><b>Ler o texto</b></span>
+  </button>
+</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sobre" id="sobre" aria-labelledby="t-sobre">
+  <div class="wrap sobre-grid">
+    <div>
+      <h2 id="t-sobre">Sobre</h2>
+      <p>Escrevo textos claros e bem apurados. Já assinei reportagens em veículos da Bahia e cobri o mercado de seguros para o portal CQCS.</p>
+      <p>Em 2022 concluí a formação de analista de e-commerce na plataforma VTEX e passei a estudar Google Analytics.</p>
+    </div>
+    <ul class="areas">
+      <li><strong>Reportagem e entrevista</strong><span>Apuração de campo, fontes ouvidas e texto pronto para publicar.</span></li>
+      <li><strong>Cobertura de mercado</strong><span>Notícias, eventos e análises do setor de seguros.</span></li>
+      <li><strong>Texto de serviço</strong><span>Explicações em linguagem simples para quem não é do assunto.</span></li>
+      <li><strong>E-commerce</strong><span>Formação em análise de e-commerce na plataforma VTEX.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contato" id="contato" aria-labelledby="t-contato">
+  <div class="wrap">
+    <h2 id="t-contato">Tem um projeto em mente?</h2>
+    <p>Conte o tema, o prazo e o público a quem o texto se destina.</p>
+    <!-- TROCAR: coloque aqui o e-mail real -->
+    <a class="btn" href="mailto:seu-email@exemplo.com">Enviar e-mail</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Tânia Araújo. Todos os textos pertencem à autora e aos veículos em que foram publicados.</div></footer>
+
+<dialog id="leitor" aria-labelledby="l-titulo">
+  <div class="sheet" id="sheet">
+    <div class="bar"><span id="l-meta"></span><button type="button" class="close" id="fechar">Fechar</button></div>
+    <h2 id="l-titulo"></h2>
+    <div class="prose" id="l-corpo"></div>
+  </div>
+</dialog>
+
+<template id="a-meteorito" data-title="Meteorito cai no quintal de uma casa em Salvador" data-meta="A Tarde, 2013 · 2 min de leitura"><p>Um estrondo grande, como se estivesse em plena época de São João. Foi assim que Paulo Preto, morador de Água de Meninos, no Comércio, descreveu o barulho que o acordou exatamente às 23h43 da madrugada de quinta-feira, 21. Chovia forte, relampejava e ele assegurou que, quando olhou pela janela, viu subir de um buraco na terra &quot;uma fumaça densa, nas cores azul e rosa&quot;.</p><p>O buraco teria aproximadamente 23 cm de profundidade. Paulo disse que colocou a mão na pedra desconhecida e se queimou. Com medo de &quot;radiação espacial&quot;, usou uma embalagem plástica para recolher o material. O que seria aquilo? Logo pela manhã, ele procurou seu vizinho, o estudante de física Almir dos Anjos.</p><p>Na mesma hora, lhe veio em mente que aquela pedra poderia não pertencer ao nosso planeta, pois o estudante não conseguiu reconhecer, de imediato, nenhum dos elementos que a constituíam.</p><p>A reportagem teve acesso ao suposto meteorito e encaminhou o morador do bairro da área do Comércio ao Instituto de Geociências da Ufba. Lá, o diretor Ronaldo Montenegro Barbosa reforçou as suspeitas sobre a rocha: &quot;Pode ser composta por hematita, especularita e materiais encontrados exclusivamente em meteoritos&quot;.</p><p>O diretor alertou que Paulo deu sorte: o estrago poderia ser grande se o objeto caísse em sua casa. Se o atingisse, pior ainda: &quot;Você estaria morto&quot;, advertiu. Muito interessado, Ronaldo Barbosa pediu que a instituição ficasse com a rocha, para que esta pudesse ser melhor analisada.</p></template>
+<template id="a-dor" data-title="Dor na juventude" data-meta="Correio, 2015 · 9 min de leitura"><p>Cinco anos. Esse foi o intervalo entre duas perdas na vida da advogada Raísa Rios, 25 anos. Suas amigas Emanuelle Gomes, 23, e Evelyn Costa, 18, morreram em acidentes de trânsito. Quando soube de Emanuelle, a mais recente, em outubro de 2013, lembrou que teria que passar de novo pela dor da ausência repentina.</p><p>Raísa recebeu a notícia de Thiana Souza, 26, também advogada e amiga de Emanuelle. “Cheguei no escritório e abri o site do CORREIO. Aí vi a notícia com o nome deles. Minha pressão baixou na hora”, recorda Thiana. Emanuelle morreu com o irmão na avenida Oceânica, em Ondina. A moto em que os irmãos estavam foi atingida pelo Kia Sorento dirigido pela médica Kátia Vargas Leal, 45 anos.</p><p>Raísa e Emanuelle ficaram amigas apenas sete meses após a morte de Evelyn. “Elas se pareciam muito. Meus pais até ficaram surpresos, era como se fosse uma cópia. Acho que foi por isso que me aproximei muito dela”, conta.</p><p>Depois do acidente, o grupo de amigas se encontrou na casa de Amanda Gomes, 28, prima de Emanuelle. No dia seguinte, foram ao cemitério do Campo Santo sem acreditar no que havia acontecido. “Um dos piores dias da minha vida, o mais difícil. Eu a vi naquele caixão e, pra mim não era ela”, diz Thiana emocionada, 20 meses após a tragédia.</p><p>Para o psicólogo Aroldo Escudeiro, especialista em luto e autor do livro Terapia do Luto, a perda súbita de pessoas próximas provoca, além do sofrimento pela ausência, um sentimento de medo.</p><p>Segundo ele, a perda de um amigo para os jovens é mais difícil de ser assimilada. “O jovem se identifica com os iguais. Ele tem uma representação mental de si mesmo como herói – de que isso nunca vai acontecer – mas, se aquela pessoa pode morrer, ele também pode. O choque é maior”.</p><p>Emanuelle, Raísa e Thiana pertenciam ao mesmo grupo de amigas, eram sete ao todo. Viajavam juntas, iam ao cinema, em festas e algumas delas ainda faziam o mesmo curso na faculdade. “Foi muito difícil por conta da situação como aconteceu, foi trágico. Seria a última pessoa com que a gente imaginava que ia acontecer esse tipo de coisa, ela sempre foi de animar todo mundo”, diz Raísa.</p><p>Para Thiana, o choque ainda foi maior. “Pra mim foi um baque. Naquele final de semana, ela ia lá pra casa, íamos ao cinema. Um pouco antes de ela morrer, estava muito distante da gente. Estava ficando mais em casa. Parecia que sabia o que ia acontecer”, diz Thiana. “Ainda me pergunto se isso foi um sinal”, acrescenta.</p><p>De acordo com a psicóloga Lilian Britto, os amigos desempenham papéis dentro do círculo de amizade – no caso de Emanuelle, ela era a agregadora, segundo depoimento do grupo. “Quando um amigo desaparece, deixa muitos papéis. Às vezes a pessoa não consegue retomar a vida porque aquele papel desempenhado fica vazio”.</p><p>As amigas seguem a rotina sem a alegria e os conselhos de Emanuelle. “Muita coisa mudou depois da morte dela. No início, o grupo de amigas teve muita dificuldade de lidar com isso. Não conseguíamos nos encontrar, ficava sempre a sensação de que estava faltando alguma coisa. Hoje a gente se encontra tranquilamente e ainda fala sobre ela com alegria”, relata Raísa.</p><h3>Irmãs de alma</h3><p>Por dez anos, as universitárias Laila Melo, 22, e Larissa Gonçalves, 19, compartilharam bons momentos e apoiaram uma a outra em outros delicados. As duas se definiam como irmãs de alma e haviam decidido tatuar a mensagem. “Dois meses antes de ela morrer, veio com essa ideia. Escolhemos que seria em tcheco (por causa da sonoridade) e o modelo da fonte”, conta Laila. Não deu tempo. Laila entrou no estúdio de tatuagem sozinha, dois meses após a morte de Larissa.</p><p>O corpo da universitária Larissa foi encontrado na escada do prédio em que morava, em Pernambués. Ela foi asfixiada pelo vizinho. O acusado, que era usuário de drogas, não tinha contato com a jovem e nem motivação para matá-la. Os homicídios são a principal causa de morte de jovens brasileiros entre 15 e 24 anos, de acordo com o Datasus, órgão do Ministério da Saúde.</p><p>Amiga de infância, Laila foi a terceira pessoa a chegar a cena do crime. “Eu nunca vou falar que perdi uma amiga, eu não perdi minha amiga, o que eu perdi foi o contato físico com ela”. As duas se conheceram na ilha de Boipeba, onde Larissa morava e Laila passava as férias.</p><p>Foi por conta dos estudos que Larissa também saiu da ilha e veio pra Salvador. “Falei muito com ela que aqui era melhor pros estudos, e assim ela conseguiu autorização dos pais e veio pra cá, no começo morou na casa da tia e por fim lá em Pernambués”.</p><p>“Levar o corpo dela para Boipeba foi um dos momentos mais tristes, chegar na ilha, descer no cais com o caixão dela, e a ilha inteira esperando. Foi muito triste. No começo eu me senti muito só, não sou do tipo que tem muitas amizades. Tive que passar 15 dias na casa do meu namorado para aos poucos voltar a dormir na minha, já que Lari passava muito tempo aqui em casa. Até meu pai veio de Boipeba para ficar comigo”, contou.</p><p>No período em que ficou na casa do namorado, Laila sonhou com a amiga todos os dias. “Era o mesmo sonho, ela não tinha morrido, que foi um engano. E foi assim ao longo do primeiro ano, mas a sensação era muito boa, porque era a sensação de reencontro. E eu contava para todo mundo que ela não morreu, que ela ainda estava aqui”.</p><p>Segundo Escudeiro, a pessoa que perdeu o amigo precisa procurar ajuda quando o luto começa a mudar a sua rotina, anteriormente a perda. “Os exemplos mais comuns são insônia, comer muito ou pouco e começar a faltar aula”.</p><p>Mateus Góes, 19, estudante, perdeu o amigo de colégio, Felipe Menezes, 17 anos, em junho de 2014, e a lembrança que tem do amigo é um número para o qual ele nunca mais vai ligar. “Não consigo apagar o número dele do meu celular, já me perguntaram isso, mas eu não consigo. Seria como cortar o último laço.”</p><p>De acordo com Mateus, Felipe havia ido a uma festa, feito uso de maconha e bebidas alcoólicas, passou mal e saiu do local sem avisar para onde iria. Após ficar desaparecido por três dias, o corpo do adolescente foi encontrado embaixo de um viaduto na avenida Garibaldi.</p><p>Ele conta que recebeu a notícia da morte de Felipe através de uma amiga, no entanto, precisou ir ao Facebook do amigo para constatar a morte pelos comentários que outras pessoas haviam deixado. “Ele era tipo meu irmãozinho mais novo, queria ser engenheiro”.</p><p>Mateus, que não gosta de ir a enterros, preferiu guardar a lembrança de quando ia com Felipe à escola ao invés do amigo dentro do caixão. “Se eu pudesse, teria conversado mais com ele, pedido para não usar mais essas coisas”, lamenta após que lembrar que passou uma fase afastado do amigo.</p><p>Os jovens cultivaram uma amizade durante três anos. “A gente acabou ficando amigo por conta de uma brincadeira. Alguém sempre escrevia o nome de mais um aluno na lista de chamada. Um dia, esse “aluno fantasma” foi chamado por engano pela professora, rimos e daí começamos a conversar”. O mais difícil de perder um amigo jovem é conviver com o espaço que fica. É como diz o rapper Emicida, em Canção pros meus amigos mortos: “o espaço daquela piada que ele sempre fazia… Não sei se fiquei mais forte ou morri também”.</p><h3>As fases do luto</h3><p>“A perda mal enfrentada pode levar a sintomas patológicos, como a depressão. Que é um sintoma comum ao luto complicado. Como o luto é um processo, ele precisa ter um fim.”, diz Aroldo.</p><p>Entorpecimento: Perceber que a pessoa morreu pode durar horas ou até uma semana. A parte mais difícil. Alguns não aceitam e entram em um estágio de negação.</p><p>Anseio e busca pelo ente perdido: Ficar procurando quem se foi pelos cantos da casa. Sente a presença. Escuta a sua voz. Necessidade de reaver a pessoa perdida.</p><p>Falar sobre a morte: Reestruturar a parte emocional. Imprescindível É essencial falar sobre a perda, mostrar que a pessoa continua “viva” dentro dos seus pensamentos</p><p>Reorganização: É necessário continuar a vida de onde ela parou, retomar as amizades e procurar outras atividades.</p><h3>A dor virou saudade</h3><p>Segundo a psicóloga Lilian Britto, a religião pode ajudar neste momento, servir como apoio. “Às vezes a religião aparece para explicar porque aquilo aconteceu. Sendo a doutrina originada pela família ou apenas do próprio jovem”. Foi assim que Laila superou a saudade da amiga. “Eu já tinha uma visão de espiritismo dede muito cedo, quando morava em Boipeba. A religião foi crucial pra mim quando tudo aconteceu”.</p><p>Thiana, que também se apoiou no espiritismo, deu uma outra saída para driblar a dor se mudando para Aracaju. “Na semana seguinte a morte dela recebi uma proposta de emprego lá. Eu precisava sair daquilo tudo, não conseguia ir aos lugares. A mudança veio muito a calhar, me afastou daquela realidade”, desabafou.</p><p>Outras pessoas procuram ajuda e superam com o apoio do ciclo social, como aconteceu com Raísa e Mateus. “Eu conversei muito com uma amiga minha e conversar com ela foi bom pra mim”, disse Mateus. “Depois de um ano a dor cessou mais, depois desse tempo a gente começa a aceitar. A missão dela foi cumprida de alguma forma”, diz Raísa.</p><p>“A coisa mais importante é entrar em contato com a perda. Na medida que a pessoa começa a vivenciar, ela começa a colocar para fora a sua emoção. A falta de viver essa emoção é que pode complicar o processo.”, esclareceu Aroldo Escudeiro.</p></template>
+<template id="a-salitre" data-title="Danos causados pelo salitre em eletroeletrônicos" data-meta="Reportagem universitária, 2012 · 3 min de leitura"><p>Thiago, estudante de arquitetura, nunca pensou que a química, matéria que odiava na escola, atrapalharia tanto sua vida. Morador da orla de Salvador há 4 anos, conta que tem enfrentado mais problemas por conta do salitre em Salvador, do que se estivesse morando em São Paulo, sua cidade natal. Foram fontes, coolers, memória, placa-mãe, placa de vídeo, praticamente um PC inteiro trocado em tempo recorde, levando em conta a qualidade do material.</p><p>O salitre, ou mais comumente conhecido como maresia, “é composto por água e pelos sais dissolvidos na água do mar, por exemplo: NaCl, KNO3, BaCl2, KCl, CaCl2 e etc”, como explica o Químico Rogério Silva. “Com a evaporação da água do mar, os íons do salitre encontram os metais dos componentes eletrônicos (maioria das vezes cobre, ferro e alumínio) causando assim a corrosão”, conta, “causando danos não só no cobre dos circuitos, como em outros metais presentes”.</p><p>A aposentada Maria Angélica sofre com as mesmas queixas de Thiago. Também moradora da orla, é obrigada a trocar os eletrodomésticos com grande frequência. “Já perdi geladeira, microondas, televisão, ventilador e até computador”, conta a aposentada. E como não conhece outros meios de proteção, usa de panos e capas para cobrir os eletrônicos da casa. E logo quando começam as avarias, chama um técnico já conhecido da família, que na maior parte das vezes prescreve a “perda total” do material devido à corrosão do salitre. “Acho até que essa maresia toda prejudica nossa saúde”, afirma Angélica.</p><p>Antônio Melo é técnico em eletrônica especialista em salitre há 14 anos, conta que 60% dos problemas relatados, estão associados ao problema da corrosão pelo salitre em seus aparelhos eletrônicos. Ele dá orientações aos usuários para que possam usufruir de seus equipamentos por mais tempo “orientamos que cubram sempre o aparelho, que os deixem sempre em stand-by e se o cliente for corajoso, romper o lacre da garantia e aplicar produtos anti-ferrugem, que são vendidos em qualquer lugar” conta o técnico.</p><p>Para a tristeza da maioria dos clientes, a garantia de eletroeletrônicos não se estende aos danos causados pela corrosão por maresia nos componentes. Por isso, quando o aparelho é levado a alguma loja autorizada pelo fabricante, na maior parte das vezes, já é considerado “perda total”, e fica a critério do cliente levar a outro técnico especializado para tentar um conserto a partir da troca de alguma peça corroída, mas, nesse caso, não há responsabilidade do fabricante.</p><p>Em relação a uma questão de saúde levantada pela aposentada Maria Angélica, o Químico Rogério Silva acredita não existir relação direta do salitre com danos à saúde, “a não ser que a pessoa já apresente problemas respiratórios”, afirma Rogério. “Existem inclusive estudos que tentam provar que a maresia pode amenizar a ação da poluição nas grandes capitais, mas nada que tenha resultado comprovado ainda” comenta.</p></template>
+<template id="a-ponte" data-title="Série: Ponte de Itaparica" data-meta="Farol da Bahia · 5 min de leitura"><p>Em uma série de entrevistas que o Farol da Bahia está realizando para entender todos os impactos que a ponte Salvador-Itaparica pode ou não causar à Baía de Todos os Santos - tanto como para órgãos que operam na baía como para as comunidades que a cercam- fomos convidados pelo Diretor de Infraestrutura e gestão Portuária, o Vice-Almirante Carlos Autran Amaral e o chefe de gabinete, José Cassiano Ferreira Filho, da Companhia das Docas do Estado da Bahia (Codeba) para um bate-papo de esclarecimentos.</p><p>Perguntado sobre o momento econômico que o país vive, e principalmente a Bahia, onde qualquer impacto em qualquer setor da economia seria sentido rapidamente, o Vice-Almirante lembrou da grande capacidade de a Codeba e os portos que administra (Salvador, Aratu e Ilhéus), e sobre os seus potenciais. “Veja bem, o porto de Salvador tem o potencial de ser um grande porto para o país. Você tem Santos, que é um porto que tem 33 quilômetros, tem Paranaguá, que é um porto grande também, mas aqui na Codeba, em Salvador, temos um terminal de contêineres (Tecon) que hoje ele tem capacidade de crescer e concorrer com outros grandes, como o de Santos”, comenta.</p><p>“O nosso porto recebe uma carga específica, em Aratu que é uma área de potencial de crescimento grande, são cargas diversificadas, como granéis, sólidos, líquidos e gasosos. Temos uma variedade grande de carga, com área para ser ampliada. A profundidade de Aratu é melhor que a de Salvador, temos uma condição natural bastante promissora, chegando à profundidade de 20 metros, sendo que em Salvador o máximo beira aos 14 metros de profundidade. O futuro para nossos portos é promissor”, explica o Vice-Almirante. Em relação à ponte Salvador-Ilha de Itaparica, a Codeba esteve presente em praticamente todas as conversas até o momento. “Até mesmo na 100ª audiência pública nós estávamos presentes, por enquanto, a ponte não é uma ‘ameaça’ para os nossos portos, mas estamos ‘de olho’, e abertos a conversas sempre com o Governador e o Vice”, comenta.</p><p>“No momento, eu diria, não temos preocupação, mas sim atenção com o aspecto geral do impacto. Se a obra da ponte pode ou não impactar em nossas operações, pelo que vemos no traçado dela, ela não deverá impactar em nosso porto. A preocupação é em relação à bacia de manobra, de ‘evolução’, onde ocorre o giro dos navios”, explica o diretor de infraestrutura.</p><p>“Esse traçado, onde a ponte tem essa curva passando pela profundidade de 5 e 8 metros de profundidade, não impactaria em nada. Os navios que hoje operam aqui, tem ‘calado’ maior do que isso, então antes de chegar na ponte, teoricamente, eles seriam ‘encalhados’”, detalha. “Na profundidade da curva inicial da ponte, não se trafega navio, por isso não há essa preocupação. Mas nós temos uma atenção enorme em relação à obra da ponte. Não estamos ‘esquecidos’ de manter nossa atenção em relação à isso, para que a ponte não venha no futuro impactar ou inviabilizar as operações de navios maiores”, comenta. “Já existe uma expectativa de recebermos navios de 366 metros de comprimento, os chamados ‘Full containers’. Hoje, só o porto de Santos é homologado para receber esse tipo de navio. Talvez tenhamos que aumentar o canal de dragagem, para que seja um pouco mais profundo, mas as condições ambientais e geográficas do porto, são muito boas para o acesso, sem muitos obstáculos”, explica Carlos Autran.</p><p>Em relação aos outros portos e toda a Baía de Todos os Santos e o recebimento de navios, o diretor de Infraestrutura explica que por enquanto não existem problemas em relação ao projeto e a realidade.“Se a ponte poderá impedir a entrada para navios para Madre de Deus ou Aratu? Com essa altura que está prevista, não impede, não irá interferir. Até a largura é bem propícia. Isso não seria um problema para impactar a navegação de navios após a ponte no canal de Cotegipe”, afirma.</p><p>E sobre o fato de existirem conversas do Estado com a Codeba, Carlos Autran mostra o quanto é aberto ao diálogo. “Existe sim a conversa do Governo do Estado com a Codeba, com a Marinha, nós estamos acompanhando e temos atenção em relação à isso. O próprio secretário de infraestrutura da Bahia, o Marcus Cavalcanti, esteve aqui. Não identificamos nada que gere impacto, por enquanto, em nossas operações”, analisa. “A não ser que mudem o traçado, mudem o tamanho para viabilizar o projeto e interfira em nossa estrutura, aí podemos ser impactados, a Marinha também, e a Tecon, a ponte mexe com muitos órgãos, cidades, população… então possivelmente existe estudo para tudo isso, pelo menos em relação à nós, estamos com atenção”, encerra o Vice-Almirante.</p><h3>A ponte</h3><p>O sistema Rodoviário Oeste - Ponte Salvador-Ilha de Itaparica é um projeto tão audacioso como o metrô de Salvador foi para a época em que foi anunciado. O projeto bilionário, que já vem sendo discutido desde 1960, e irá impactar diretamente cerca de 38 municípios, 3,98 milhões de habitantes e será feita em Parceria Público Privada (PPP). A ponte terá a extensão de 12,4 km, com uma largura de 36 metros, contando com 2 pistas com 3 faixas cada, mais o acostamento. A estimativa dos órgãos envolvidos nesse projeto - Seplan, Seinfra, Sedur, Sefaz, Casa Civil e Desembahia - é que até o 31º ano de operação, já tenham passado cerca de 151,6 mil/dia veículos.</p><p>Por conta do projeto da ponte, o Estaleiro que está para ser construído na região de Maragojipe, a pouco menos de 200 quilômetros de Salvador, preciso ser adiado em 5 anos para ter seu projeto reestruturado por conta da ponte. O estaleiro foi orçado em R$ 2,6 bilhões, e promete movimentar a economia baiana em breve.</p></template>
+<template id="a-dpvat" data-title="Parceria para atender ao DPVAT" data-meta="CQCS, 2011 · 3 min de leitura"><p>De acordo com dados levantados pela Seguradora Líder DPVAT, o trânsito brasileiro deixou 26.894 mortos só neste primeiro semestre, com média de 147 óbitos por dia.</p><p>É um número que ainda pode aumentar, pelo fato de que o acidentado tem até 3 anos para da data da ocorrência do evento para dar entrada no seguro.</p><p>O número de pessoas que felizmente sobrevivem, mas ficam com algum tipo de invalidez permanente desse semestre é de 107.403. Outras 30.814 pessoas receberam reembolso de despesas médicas devido a tratamento ou cuidados hospitalares necessários após envolvimento com acidente de trânsito.</p><h3>Parceria com os Correios</h3><p>O projeto foi desenvolvido para aumentar a capilaridade do atendimento em todo o Brasil. As três primeiras unidades da federação a serem atendidas com esse projeto piloto são Ceará, Piauí e Maranhão. A escolha foi feita por conta da dificuldade de atendimento às vitimas de acidentes de trânsito para o recebimento do seguro.</p><p>A partir de primeiro de agosto, as agências próprias dos Correios, nos três Estados, fornecerão formulários para o requerimento do Seguro, encaminhando a solicitação gratuitamente à Seguradora Líder DPVAT, responsável pela análise dos pedidos.</p><p>Houve todo um treinamento para que os atendentes das agências próprias dos Correios em cada estado possam atender a demanda que irá surgir em breve, todos eles serão capazes de fazer a checagem da documentação e encaminhar as solicitações de indenização. Os interessados receberão um folheto explicativo com os canais de atendimento do DPVAT para esclarecer as dúvidas e o comprovante de envio pelos Correios.</p><p>Nessa fase inicial do projeto serão atendidos 546 municípios, com totalidade de 1.775 pontos em todo o Brasil.</p><h3>Sobre o DPVAT</h3><p>No Brasil, todo o cidadão que sofre um acidente de trânsito tem direito ao Seguro DPVAT. As situações indenizadas são: morte (R$ 13.500) ou invalidez permanente (até R$ 13.500, dependendo do tipo de invalidez), e reembolso de despesas médicas (até R$2.700) . O próprio acidentado ou herdeiro pode dar entrada no pedido de indenização e/ou de reembolso do Seguro DPVAT, não sendo necessário o auxílio de intermediários ou advogados, já que o procedimento é simples e gratuito. Basta juntar a documentação necessária e levar ao ponto de atendimento mais próximo. Os endereços podem ser consultados no site da Seguradora Líder ou pelo Serviço de Atendimento ao Cliente DPVAT. Os recursos do Seguro são financiados pelos proprietários de veículos, por meio de pagamento anual. Do total arrecadado, 45% são repassados ao Ministério da Saúde, para custeio do atendimento médico-hospitalar às vítimas de acidentes de trânsito em todo país. 5% são repassados ao Ministério das Cidades, para aplicação exclusiva em programas destinados à prevenção de acidentes de trânsito. Os demais 50% são voltados para o pagamento das indenizações.</p></template>
+<template id="a-cartao" data-title="Popularizar o seguro nem sempre é vantagem" data-meta="CQCS, 2011 · 2 min de leitura"><p>Com a popularização do seguro, operadoras de cartão de crédito disponibilizam para seus clientes um leque de serviços que pode ser adquirido sem corretor, pelo próprio telefone com burocracia praticamente inexistente.</p><p>A investida das seguradoras começou com as tradicionais apólices que protegem contra perda e roubo do cartão, mas agora já é possível comprar seguro de vida, acidentes pessoais, residencial e desemprego, tudo via cartão.</p><p>Os preços são mínimos, o cliente pode adquirir diversos serviços pelo preço mínimo de R$6 ao mês. Com isso ele fica protegido de tudo que possa vir a acontecer. Além da venda fácil, o seguro tem rendido milhões para os bancos.</p><p>E como fica o corretor?</p><p>Existem diversas ações no Ministério Público Estadual (MPE) que pretendem “fechar o cerco” contra esses seguros de pequeno valor, que são contratados com ou sem o consentimento do consumidor.</p><p>Há também projetos de leis estaduais que prezam a presença do corretor de seguros em todas operações de compra e venda de seguros. Mas o debate em relação à esse tema ainda divide muito as opiniões.</p><p>Infelizmente a profissão “corretor” ainda não é muito conhecida, por esse motivo o consumidor não entende a importância da presença desse profissional, que como qualquer outro, dedica parte de sua vida em estudos para que haja sempre qualificação.</p><p>Existe realmente vantagem?</p><p>O intuito da venda “casada” é trazer o mínimo de burocracia ao consumidor. Aquele pequeno valor de, por exemplo, R$11,90 debitado na conta todo mês, como forma de seguro perda e roubo do cartão, pode trazer muita dor de cabeça.</p><p>Esse pequeno valor pode se tornar uma despesa a mais. E então ao tentar cancelar, a administradora tenta adicionar mais algum atrativo, para não perder o cliente. O que a maioria das pessoas não sabe, é que essa venda casada é proibida pelo código de defesa do consumidor.</p><p>A iniciativa do MPE é realmente muito boa, mas ela depende exclusivamente da burocracia existente na justiça Brasileira. Existe a proibição da venda de forma provisória, mas se a sentença for favorável e for entendido que a cobrança é abusiva, os consumidores terão direito à devolução em dobro referente aos valores pagos nos últimos cinco anos.</p></template>
+<template id="a-internet" data-title="A internet e a corretagem" data-meta="CQCS, 2011 · 2 min de leitura"><p>A internet só tem proporcionado crescimento para quem possui seu controle. Qualquer empresa, de qualquer ramo, sabendo se utilizar desse infinito espaço virtual, pode obter sucesso e destaque.</p><p>É o caso do mercado de seguros, que mais uma vez passa por “mudanças”, se é que pode se intitular assim. A internet quer acabar com a presença do tão importante corretor de seguros. A existência de sites que oferecem a venda de seguros, de diversos ramos, de forma online, vem preocupando esse profissional que tanto luta por qualificação.</p><p>Alguns mantenedores querem passar para o público que o corretor tem sim, contato com esse canal, que ele está sempre presente. Mas será verdade?</p><h3>Globalização da informação</h3><p>É fato que muitas seguradoras já estão presentes na rede, oferecendo informações, cotações online, apólices, acesso direto do segurado à serviços. Não se pode negar que esse tipo de serviço permite ao segurado contato direto com sua seguradora.</p><p>Para alguns corretores torna-se desafio se atualizar para poder desenvolver uma atuação virtual. Apesar de ser um mercado relativamente novo, a corretagem sempre trouxe um forte elo entre o corretor e o cliente, e a internet tem a tendência de quebrar isso. É esperado que o corretor realmente busque esse aperfeiçoamento, para que o mercado que está em expansão não murche com essa grande mudança que a atualidade e a globalização trazem.</p></template>
+<template id="a-ouvidorias" data-title="O papel das ouvidorias para o mercado de seguros" data-meta="CQCS, 2011 · 2 min de leitura"><p>Ao longo dos últimos cinco anos, o mercado de seguros só tem crescido e daí surgiu a necessidade de um canal direto entre o consumidor e as seguradoras. Se, por um lado, as estatísticas quantificam os índices de reclamações, por outro lado as ouvidorias ganharam cada vez mais relevância.</p><p>Com essa abordagem, a diretora executiva da CNseg, Solange Beatriz, abordou o papel das ouvidorias, durante a 5ª Conseguro. Ela considera que não é possível apontar queda na qualidade de produtos e serviços de seguros, mas que as empresas tem mostrado mais interesse e disposição em resolver os problemas, sem intermédio dos órgãos públicos.</p><p>“Se observarmos o volume de denúncias encaminhadas pela Susep às empresas, somente 6% não são resolvidas. Então, mais de 90% das demandas são solucionadas pelo canal de ouvidoria das companhias”, destaca Solange.</p><p>Ela reforça que os 6% sem solução são transformados em processos, mas apenas 1% é declarado como direito do consumidor. “Isso demonstra que as negativas são bem fundamentadas e conscientes, comprovando que os ouvidores são representantes da indústria, mas com autonomia e independência” afirma.</p><p>Na avaliação da diretora da CNseg, o cenário é positivo, pois as empresas têm interesse em conhecer e solucionar os conflitos com os consumidores. “Não há porque prolongar as demandas”, enfatiza Solange, aproveitando para informar que o mercado é contemplado com um canal de diálogo por meio de 99 ouvidorias.</p><p>“A CNseg está empenhada em aperfeiçoar a comunicação e a imagem do setor para que os produtos cheguem ao conhecimento do consumidor, permitindo o acesso à toda população”, finaliza.</p></template>
+<template id="a-escola" data-title="A Escola “cai” na rede" data-meta="CQCS, 2011 · 2 min de leitura"><p>Com o tráfego constante de informações na web, nenhuma empresa pode se dar ao luxo de ficar offline. Estar presente no Facebook, Orkut e Twitter faz parte da estratégia para ter o mínimo de projeção. Nesse contexto, não há porque se limitar somente em “existir”, deve haver interatividade com os usuários na rede.</p><p>Essas são algumas das idéias defendidas pelo superintendente Comercial da Escola Nacional de Seguros, Henrique Berardinelli. Na opinião dele, falar de redes sociais é trabalhar com algo muito amplo.</p><p>“O Facebook, em especial, está em enorme ascensão. A quantidade de pessoas conectadas se multiplica a cada dia. Esse tipo de ferramenta traz a comodidade do usuário receber as informações referentes aos assuntos de interesse através do feed de notícias, podendo publicar o que acha de mais interessante para compartilhar com os internautas”, acrescenta Berardinelli.</p><h3>Estratégia de diálogo</h3><p>Segundo o superintendente da Escola, a Fan Page da Escola é essencial. “Nossa intenção é construir um diálogo para conseguir aproximação real com o público específico que deseja se graduar”, explica.</p><p>Nesse sentido, o foco da Fan Page é criar e consolidar um canal de relacionamento franco com o usuário. “Dessa forma, as abordagens utilizadas são as publicações de datas de eventos, vestibulares, vídeos-depoimentos de alunos e ex-alunos, com interação total dos internautas que “curtirem” a página”, reforça Berardineli.</p><p>Para encontrar a Fan Page da Escola no Facebook, basta pesquisar na barra de “busca” com a palavra-chave “Escola Nacional de Seguros” - e assim poder curti-la para ter acesso total às postagens da instituição.</p></template>
+<template id="a-automovel" data-title="Dicas para aquisição do Seguro de Automóvel" data-meta="CQCS, 2011 · 2 min de leitura"><p>Por mais básicos que sejam, existem procedimentos que as pessoas ignoram na hora de contratar um seguro automotivo. Todas as coberturas incluídas no contrato, combinadas com os dados do contratante - como idade do condutor principal, tempo de habilitação, local onde deixa o carro durante a noite, seu endereço, além de outras informações - determinam o valor do seguro.</p><p>“É necessário ler atentamente as questões formuladas no Questionário de Avaliação de Riscos comumente chamado de Perfil do Segurado e responder com exatidão e de forma categórica”, ensina o executivo da Excelsior Seguros na Bahia, Nelson Uzêda.</p><p>“Além disso, recomenda-se atenção nas informações declaradas, de forma a evitar referências inverídicas ou infundadas, visando obter beneficio tarifário indevido ao responder as questões formuladas no questionário das companhias”, complementa Uzêda.</p><p>Nesse contexto, o questionário / Perfil deve ser preenchido com total veracidade e precisão. Caso o próprio corretor faça o preenchimento, é bom o segurado conferir e assinar , pois se no questionário / perfil constar, por exemplo, que na sua residência o carro fica em garagem quando, na realidade, é estacionado na rua, a seguradora poderá se recusar a arcar com o prejuízo em caso de dano ou furto do veículo.</p><p>DPVAT e “Carta Verde”</p><p>Quando se trata de seguros obrigatórios para automóveis, existem dois muito importantes. Um deles é o Seguro DPVAT, cuja finalidade é amparar as vítimas de acidentes de trânsito em todo o território nacional, não importando de quem seja a culpa dos acidentes. As coberturas incluem indenização por morte acidental , invalidez permanente e despesas de assistência médica e suplementar (DAMS).</p><p>Já o “Carta Verde” se trata de seguro obrigatório para veículos brasileiros de passeio ou aluguel, quando em viagem aos países do Mercosul. Respeitadas suas condições contratuais, destina-se a indenizar terceiros ou reembolsar o segurado das despesas pelas quais seja civilmente responsável, em ocorrências na Argentina, Uruguai e Paraguai.</p><p>O produto abrange danos corporais e materiais, além do pagamento de honorários de advogado de defesa do segurado, bem como custas judiciais.</p><p>Mas, em todo caso, Uzêda faz questão de alertar para os cuidados na aquisição dos seguros. “Não se deve comprar analisando apenas o preço, pois com certeza haverão surpresas desagradáveis e desgastantes em caso de eventual sinistro”. E ainda, que seguro somente deve ser intermediado por um Corretor Habilitado pela SUSEP.</p></template>
+<template id="a-mp" data-title="O que é e qual a importância do Ministério Público?" data-meta="Politz · 3 min de leitura"><p>Ao pé da letra o Ministério Público é uma instituição pública autônoma, a quem a Constituição Federal atribuiu a incumbência de defender a ordem jurídica, o regime democrático e os interesses sociais e individuais indisponíveis.</p><p>Traduzindo para um significado leigo: o Ministério Público é o grande defensor dos interesses do conjunto da sociedade brasileira. Ele tem a obrigação de defender a coisa pública, sempre com isenção, apartidarismo e profissionalismo. Ele deve ser imparcial.</p><p>O Ministério Público é independente e não pertence a nenhum dos três Poderes – Executivo, Legislativo e Judiciário. Para isso, todos os seus componentes têm as mesmas garantias asseguradas aos que integram do Poder Judiciário, ainda que não tenham qualquer dependência com esse Poder.</p><p>O papel dele é fiscalizar a execução das leis que protegem o patrimônio nacional e os interesses sociais e particulares, fazendo controle externo da atividade policial, promovendo ação penal pública e expedindo recomendação a fim de sugerir a melhoria de serviços públicos.</p><p>É importante saber que pertencem ao Ministério Público da União o Ministério Público Federal (MPF), Ministério Público do Trabalho (MPT), Ministério Público Militar (MPM), Ministério Público do Distrito Federal e Territórios (MPDFT).</p><p>O Ministério Público pode ser Federal ou Estadual. No primeiro, Procuradores da República atuam junto à Justiça Federal e pertencem ao Ministério Público da União. No segundo, Promotores e Procuradores de Justiça trabalham junto à Justiça Estadual e são funcionários do Ministério Público Estadual.</p><p>Entendendo os tipos de Ministérios Públicos existentes na República</p><p>Ministério Público Federal: Defende os interesses da sociedade nos casos que envolvam órgãos, bens, serviços, verbas, áreas ou interesses da União. Atua na Justiça Federal, integrada, no Primeiro Grau, pelas Varas Federais e, no segundo grau, pelo Tribunal Regional Federal (TRF). Também atua nos graus superiores, com o Superior Tribunal de Justiça (STJ) e ao Supremo Tribunal Federal (STF). Seus membros são chamados Procuradores da República.</p><p>Ministério Público do Trabalho: ele atua em questões trabalhistas que tenham interesse público, envolvendo trabalhadores de órgãos públicos ou privados. É mediador de conflitos, como dissídios coletivos e greves. Também atua no combate ao trabalho escravo e infantil e na fiscalização do trabalho de adolescentes e índios.</p><p>Ministério Público Militar: responsável pelas investigações e pela proposição das ações em casos de crimes militares cometidos por integrantes das Forças Armadas. Os crimes militares cometidos por integrantes da Polícia Militar são investigados pelo Ministério Público estadual.</p><p>Ministério Público do Distrito Federal e Territórios: ele tem as mesmas funções e áreas de atuação do Ministério Público estadual, mas pertence à estrutura do Ministério Público da União. Seus integrantes também são chamados de Promotores de Justiça e Procuradores de Justiça.</p><p>Ministério Público Eleitoral: atua em todos os processos que tramitam na Justiça Eleitoral. Não possui quadro próprio, por isso são designados Promotores de Justiça dos Estados e Procuradores da República (do Ministério Público Federal) para atuarem extraordinariamente na área. Eles ocupam a função pelo período de dois anos, em sistema de rodízio, acumulando com o cargo original.</p><p>Por esses e tantos outros motivos é que o Ministério Público é tão importante para a sociedade. Mais importante ainda que ele mantenha a sobriedade e não se deixe ser usado para fins escusos que levem a sociedade a danos permanentes.</p></template>
+
+<script>
+(function(){
+  var dlg=document.getElementById('leitor'),sheet=document.getElementById('sheet'),last=null;
+  function abrir(id){
+    var t=document.getElementById(id); if(!t) return;
+    document.getElementById('l-titulo').textContent=t.dataset.title;
+    document.getElementById('l-meta').textContent=t.dataset.meta;
+    var c=document.getElementById('l-corpo'); c.innerHTML=''; c.appendChild(t.content.cloneNode(true));
+    sheet.scrollTop=0; document.documentElement.classList.add('lock'); dlg.showModal();
+  }
+  document.querySelectorAll('[data-open]').forEach(function(b){
+    b.addEventListener('click',function(){last=b;abrir(b.dataset.open)});
+  });
+  function fechar(){dlg.close()}
+  document.getElementById('fechar').addEventListener('click',fechar);
+  dlg.addEventListener('click',function(e){if(e.target===dlg)fechar()});
+  dlg.addEventListener('close',function(){document.documentElement.classList.remove('lock');if(last)last.focus()});
+
+  var chips=document.querySelectorAll('.chip'),rows=document.querySelectorAll('.row');
+  chips.forEach(function(ch){
+    ch.addEventListener('click',function(){
+      chips.forEach(function(o){o.setAttribute('aria-pressed',o===ch?'true':'false')});
+      rows.forEach(function(r){r.hidden=!(ch.dataset.filter==='all'||r.dataset.cat===ch.dataset.filter)});
+    });
+  });
+})();
+</script>
+</body>
+</html>
